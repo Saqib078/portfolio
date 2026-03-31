@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+.navbar_menu {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.menu ul li {
+    list-style: none;
+    padding: 5px 15px;
+    color: #7070a0;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.let_but_inner button {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #080810;
+    background-color: #63b3ed;
+    font-weight: 800;
+    border:none;
+}
