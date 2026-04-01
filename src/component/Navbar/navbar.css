@@ -4,22 +4,106 @@
     font-family: "Cormorant Garamond", serif;
 }
 
-.menu ul li {
-    list-style: none;
-    padding: 5px 15px;
+.menu ul li a {
+    padding: 10px 20px;
     color: #7070a0;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #14142a;
+    border-radius: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
 }
 
-.let_but_inner button {
+/* sliding background layer */
+.menu ul li a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #63b3ed;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+/* hover + active */
+.menu ul li a:hover::before,
+.menu ul li a.active::before {
+    transform: scaleX(1);
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    color: #14142a;
+    border-color: #63b3ed;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 179, 237, 0.4);
+}
+
+.let_but_inner p a {
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #080810;
     background-color: #63b3ed;
     font-weight: 800;
-    border:none;
+    border: none;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 20px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+/* sliding animation layer */
+.let_but_inner p a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #f6ad55;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+
+    z-index: 0;
+}
+
+/* text always above */
+.let_but_inner p a span {
+    position: relative;
+    z-index: 2;
+}
+
+/* hover + active */
+.let_but_inner p a:hover::before,
+.let_but_inner p a.active_letstalk::before {
+    transform: scaleX(1);
+}
+
+.let_but_inner p a:hover,
+.let_but_inner p a.active_letstalk {
+    color: #14142a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 179, 237, 0.4);
 }
