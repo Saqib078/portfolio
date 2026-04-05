@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+.about_content_box {
+    background-color: #5982db1a;
+    border: 1px solid #5982db3d;
+    border-radius: 20px;
+    padding: 50px 75px;
+
+}
+
+.about_content_box3 {
+    background-color: #5982db1a;
+    border: 1px solid #5982db3d;
+    border-radius: 20px;
+    padding: 50px;
+    margin-left: 40px;
+    height: 500px;
+
+}
+
+
+.about_content_box2 {
+    background-color: #5982db1a;
+    border: 5px solid #5982db3d;
+    overflow: hidden;
+    max-width: 200px;
+    /* optional */
+    aspect-ratio: 1 / 1;
+    /* height auto equal ho jayegi */
+    border-radius: 50%;
+}
+
+.about_avatar_name p:nth-child(1) {
+    font-family: "Syne", sans-serif;
+}
+
+.about_avatar_name p:nth-child(2) {
+    font-family: "Playwrite PL", cursive;
+}
+
+.about_avatar_name p:nth-child(3) {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.about_content p {
+    padding-top: 10px;
+}
+
+.about_head1 {
+    font-family: "Syne", sans-serif;
+}
+
+.about_head2 {
+    font-family: "Syne", sans-serif;
+}
+
+.about_head3 {
+    font-family: "Playwrite PL", cursive;
+}
+
+.about_content {
+    font-family: "Cormorant Garamond", serif;
+}

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+.about_head1 {
+    font-family: "Syne", sans-serif;
+}
+
+.about_head2 {
+    font-family: "Syne", sans-serif;
+}
+
+.about_head3 {
+    font-family: "Playwrite PL", cursive;
+}

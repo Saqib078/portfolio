@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
 .slide_container {
   position: fixed;
   inset: 0;
   z-index: 40;
+  font-family: "Cormorant Garamond", serif;
   pointer-events: none;
   display: none;
 }

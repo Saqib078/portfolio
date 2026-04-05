@@ -28,10 +28,10 @@ const Slide = ({ openclose, setOpenclose }: SlideProps) => {
         }`}
       > */}
       <div className="flex w-full h-full">
-        <div className="max-[500]:w-[20%] w-[30%]" />
-        <div className="sidebar max-[500]:w-[80%] w-[70%] h-full bg-[#14142a]">
+        <div className="max-[500px]:w-[20%] w-[30%]" />
+        <div className="sidebar max-[500px]:w-[80%] w-[70%] h-full bg-[#14142a]">
           <div className="Menu_list_slide pt-[15vh]">
-            <ul className="max-[500]:pl-[10%] pl-[15%]">
+            <ul className="max-[500px]:pl-[10%] pl-[15%]">
               <li className="mb-[10px]">
                 <a href="#About" onClick={() => setOpenclose(false)}>
                   About

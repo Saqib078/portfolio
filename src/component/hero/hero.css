@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+.hero_context1 p {
+    font-family: "Playwrite PL", cursive;
+}
+
+.hero_context2 p {
+    font-family: "Playwrite PL", cursive;
+    text-transform: uppercase;
+}
+
+.hero_context3 p {
+    font-family: "Cormorant Garamond", serif;
+    text-transform: uppercase;
+}
+
+.hero_context4 p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.hero_context4 p span {
+    font-family: "Playwrite PL", cursive;
+    color: #f6ae55d8;
+}
+
+.button_resume p {
+    padding: 10px 45px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    border: 1px solid #5982dbe6;
+    border-radius: 999px;
+    cursor: pointer;
+    color: #5982dbe6;
+
+    /* ✨ animation setup */
+    background: linear-gradient(to right, #f6ad55 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button_resume p:hover {
+    background-position: left bottom;
+    border-color: #080810;
+    color: #080810;
+}
