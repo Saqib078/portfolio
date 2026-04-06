@@ -9,9 +9,11 @@ function App() {
     <>
       <div>
         <Navbar />
-        <Hero/>
-        <About/>
-        <Work/>
+        <Hero />
+        <About />
+        <Work />
+        <About />
+        <About />
         <Footer />
       </div>
     </>

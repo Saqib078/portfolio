@@ -1,12 +1,11 @@
 import "./about.css";
 import avatar from "../../assets/avatar3.png";
-import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
 
 const About = () => {
-  const scrollRef = useRef(null)
   return (
     <>
+      <div>
+      </div>
       <div className="flex justify-center items-center">
         <div className=" w-[70%]">
           <div className="about_head">

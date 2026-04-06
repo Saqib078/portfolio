@@ -1,115 +1,84 @@
+"use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import pic1 from '../../assets/Screenshot (164).png';
+import pic2 from '../../assets/Screenshot (166).png';
+import pic3 from '../../assets/Screenshot (167).png';
 
-const cards = [
-  { title: "Div 1", bg: "from-blue-500 to-blue-600", accent: "bg-blue-400/20" },
-  {
-    title: "Div 2",
-    bg: "from-purple-500 to-purple-600",
-    accent: "bg-purple-400/20",
-  },
-  { title: "Div 3", bg: "from-pink-500 to-pink-600", accent: "bg-pink-400/20" },
-];
 
-interface CardProps {
-  card: (typeof cards)[number];
+const TOTAL = 3;
+
+const Card = ({
+  children,
+  index,
+}: {
+  children: React.ReactNode;
   index: number;
-  total: number;
-  scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
-}
+}) => {
+  const { scrollYProgress } = useScroll();
 
-const AnimatedCard = ({ card, index, total, scrollYProgress }: CardProps) => {
-  const isLast = index === total - 1;
+  let start = 0;
+  let end = 0;
 
-  const segment = 1 / total; // 0.333
-  const blurStart = segment * (index + 1); // Div1=0.33, Div2=0.66, Div3=1.0
-  const blurEnd = Math.min(1, blurStart + segment); // Div1=0.66, Div2=1.00
+  if (index == 0) {
+    start = (index + 1) / TOTAL;
+    end = (index + 1.5) / TOTAL;
+  }
+  else{
+    start = (index+0.4) / TOTAL;
+    end = (index + 1)  / TOTAL;
+  }
 
-  // Same 2-keyframe range for ALL cards — no sectionStart involved.
-  // This means Div1 behaves EXACTLY like Div2 and Div3:
-  //   - stays at scale=1, blur=0 until blurStart
-  //   - then animates to scale=0.75, blur=10px by blurEnd
-  const scale = useTransform(
-    scrollYProgress,
-    [blurStart, blurEnd],
-    isLast ? [1, 1] : [1, 0.75],
-  );
-
-  const opacity = useTransform(
-    scrollYProgress,
-    [blurStart, blurEnd],
-    isLast ? [1, 1] : [1, 0.4],
-  );
-
-  const y = useTransform(
-    scrollYProgress,
-    [blurStart, blurEnd],
-    isLast ? [0, 0] : [0, -30],
-  );
-
+  const scale = useTransform(scrollYProgress, [start, end], [1, 0.6]);
   const filter = useTransform(
-    scrollYProgress,
-    [blurStart, blurEnd],
-    isLast ? ["blur(0px)", "blur(0px)"] : ["blur(0px)", "blur(10px)"],
+    scale,
+    (s) => `blur(${Math.max(0, (1 - s) * 15)}px)`,
   );
 
   return (
-    <section
-      className="h-screen sticky top-0 flex items-center justify-center"
-      style={{ zIndex: index + 1 }}
-    >
+    <div className="mx-[20px] w-[90vw] h-[100vh] border-2 border-gray-600 bg-transparent flex items-center justify-center overflow-hidden">
       <motion.div
-        style={{ scale, opacity, y, filter }}
-        className={`
-          relative w-[90%] max-w-3xl h-[80vh] md:h-[85vh]
-          bg-gradient-to-br ${card.bg}
-          rounded-3xl shadow-2xl overflow-hidden
-          flex items-center justify-center
-        `}
+        style={{ scale, filter }}
+        className="w-full h-full flex items-center justify-center"
       >
-        <div
-          className={`absolute w-64 h-64 rounded-full ${card.accent}
-            -top-10 -right-10 blur-2xl pointer-events-none`}
-        />
-        <div className="relative text-center text-white select-none">
-          <p className="text-sm font-medium uppercase tracking-widest opacity-70 mb-2">
-            Section {index + 1}
-          </p>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-            {card.title}
-          </h2>
-          <p className="mt-4 text-white/60 text-sm md:text-base max-w-xs mx-auto">
-            Scroll down to see the next card stack on top.
-          </p>
-        </div>
+        {children}
       </motion.div>
-    </section>
-  );
-};
-
-const Paradox = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  return (
-    <div className="relative">
-      <div ref={containerRef} className="relative h-[300vh]">
-        {cards.map((card, index) => (
-          <AnimatedCard
-            key={index}
-            card={card}
-            index={index}
-            total={cards.length}
-            scrollYProgress={scrollYProgress}
-          />
-        ))}
-      </div>
     </div>
   );
 };
 
-export default Paradox;
+export default function Paradox() {
+  return (
+    <div className="h-[300vh]">
+      <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[10]">
+        <Card index={0}>
+          <div className="w-full h-full bg-red-400 flex items-center justify-center text-2xl">
+            <div>
+              <img src={pic1} alt="" width="100%"/>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[20]">
+        <Card index={1}>
+          <div className="w-full h-full bg-blue-400 flex items-center justify-center text-2xl">
+             <div>
+              <img src={pic2} alt="" width="100%"/>
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[30]">
+        <Card index={2}>
+          <div className="w-full h-full bg-green-400 flex items-center justify-center text-2xl">
+             <div>
+              <img src={pic3} alt="" width="100%"/>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
