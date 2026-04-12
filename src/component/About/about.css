@@ -33,15 +33,15 @@
 }
 
 .about_avatar_name p:nth-child(1) {
-    font-family: "Syne", sans-serif;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .about_avatar_name p:nth-child(2) {
-    font-family: "Playwrite PL", cursive;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .about_avatar_name p:nth-child(3) {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Fraunces", serif;
 }
 
 .about_content p {
@@ -49,17 +49,18 @@
 }
 
 .about_head1 {
-    font-family: "Syne", sans-serif;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .about_head2 {
-    font-family: "Syne", sans-serif;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .about_head3 {
-    font-family: "Playwrite PL", cursive;
+    font-family: "Fraunces", serif;
 }
 
 .about_content {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }

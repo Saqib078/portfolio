@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+.image_style {
+    width: 65px;
+    height: 74px;
+    overflow: hidden;
+    /* bahar nahi niklega */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image_style img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* pura logo dikhega */
+    filter: grayscale(110%);
+    transition: filter 0.3s ease;
+}
+
+.image_container:hover .image_style img {
+    filter: grayscale(0%) brightness(1.4) contrast(1.2) saturate(1.6);
+}
+
+.image_container {
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff14;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.Logo_name {
+    padding: 5px 0px;
+    font-size: 14px;
+    color: #cdcbcb;
+    font-family: "Cormorant Garamond", serif;
+}
+.image_container:hover .Logo_name {
+    color: #fff;
+}

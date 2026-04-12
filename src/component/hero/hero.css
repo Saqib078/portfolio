@@ -1,32 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 .hero_context1 p {
-    font-family: "Playwrite PL", cursive;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .hero_context2 p {
-    font-family: "Playwrite PL", cursive;
+    font-family: "Fraunces", serif;
+    font-style: initial;
     text-transform: uppercase;
 }
 
 .hero_context3 p {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Outfit", sans-serif;
     text-transform: uppercase;
 }
 
 .hero_context4 p {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .hero_context4 p span {
-    font-family: "Playwrite PL", cursive;
+    font-family: "Fraunces", serif;
     color: #f6ae55d8;
 }
 
 .button_resume p {
     padding: 10px 45px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     border: 1px solid #5982dbe6;
     border-radius: 999px;

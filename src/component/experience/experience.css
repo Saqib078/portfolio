@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+.details_company ul li {
+    padding: 5px;
+    /* color: #fff; */
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.company_name p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.company_link a {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.company_position,
+.company_date {
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* globals.css ya index.css */
+
+@keyframes scaleLine {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.animate-growLine {
+    transform-origin: top;
+    transform: scaleY(0);
+    /* 👈 IMPORTANT: start me invisible */
+    opacity: 0;
+    /* 👈 hide before animation */
+    animation: scaleLine 5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

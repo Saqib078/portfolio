@@ -9,10 +9,10 @@ const About = () => {
       <div className="flex justify-center items-center">
         <div className=" w-[70%]">
           <div className="about_head">
-            <div className="about_head1 text-[20px] text-[#5982dbe6]">
+            <div className="about_head1 text-[16px] text-[#5982dbe6]">
               <p>01 — About Me</p>
             </div>
-            <div className="about_head2 text-[48px] text-[#fff] tracking-[2px]">
+            <div className="about_head2 text-[32px] text-[#fff] tracking-[1px]">
               <p>Built at the edge of</p>
             </div>
             <div className="about_head3 text-[48px] text-[#5982dbe6]">
@@ -21,7 +21,7 @@ const About = () => {
           </div>
           <div className="flex about_content_container w-[100%] items-center">
             <div className="about_content_box w-[55%] mt-[40px]">
-              <div className="about_content  text-[22px] text-[#fff] text-justify  tracking-[1px]">
+              <div className="about_content  text-[18px] text-[#fff] text-justify  tracking-[1px]">
                 <p>
                   I'm Syed Saqib Ali, a full-stack developer with 2 years of
                   experience building modern web applications, backed by a
