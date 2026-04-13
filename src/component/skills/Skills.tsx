@@ -30,12 +30,12 @@ import logo26 from "../../log/images__3_-removebg-preview (1).png";
 const Skills = () => {
   return (
     <>
-      <div className="flex justify-center pt-[60px] bg-[#0d0d1a]">
+      <div className="flex justify-center pt-[60px]">
         <div className="about_head w-[70%] pb-[60px]">
-          <div className="about_head1 text-[20px] text-[#5982dbe6]">
-            <p>02 — Tech Stack</p>
+          <div className="about_head1 text-[16px] text-[#5982dbe6]">
+            <p>03 — Tech Stack</p>
           </div>
-          <div className="about_head2 text-[48px] text-[#fff] tracking-[2px]">
+          <div className="about_head2 text-[32px] text-[#fff] tracking-[1px]">
             <p>Powered by latest</p>
           </div>
           <div className="about_head3 text-[48px] text-[#5982dbe6]">
@@ -44,7 +44,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="bg-[#0d0d1a] pb-[70px]">
+      <div className=" pb-[70px]">
         <div className="flex justify-center">
           <div className="image_container">
             <div className="image_style bg-white rounded">

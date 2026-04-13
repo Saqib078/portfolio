@@ -4,9 +4,8 @@ import avatar from "../../assets/avatar3.png";
 const About = () => {
   return (
     <>
-      <div>
-      </div>
-      <div className="flex justify-center items-center">
+      <div></div>
+      <div className="flex justify-center items-center mt-[70px] mb-[90px]">
         <div className=" w-[70%]">
           <div className="about_head">
             <div className="about_head1 text-[16px] text-[#5982dbe6]">
@@ -21,24 +20,30 @@ const About = () => {
           </div>
           <div className="flex about_content_container w-[100%] items-center">
             <div className="about_content_box w-[55%] mt-[40px]">
-              <div className="about_content  text-[18px] text-[#fff] text-justify  tracking-[1px]">
+              <div className="about_content text-[18px] text-justify tracking-[2px]">
                 <p>
-                  I'm Syed Saqib Ali, a full-stack developer with 2 years of
-                  experience building modern web applications, backed by a
-                  B.Tech in Computer Science.I started coding in 11th grade, and
-                  that early curiosity grew into real-world experience through
-                  an internship at XenonStack and 2 years of professional work
-                  at Technovel, where I worked across both frontend and backend
-                  systems using technologies like React, Next.js, and Node.js.
+                  I'm Syed Saqib Ali, a <span>full-stack developer</span> with 2
+                  years of experience building modern web applications, backed
+                  by a <span>B.Tech in Computer Science</span>.I started coding
+                  in 11th grade, and that early curiosity grew into real-world
+                  experience through an internship at <span>XenonStack</span>{" "}
+                  and 2 years of professional work at <span>Technovel</span>,
+                  where I worked across both frontend and backend systems using
+                  technologies like <span>React, Next.js, and Node.js</span>.
+                  <br />
+                  <br />
                 </p>
                 <p>
                   {" "}
                   I led the development of a data visualization dashboard that
                   boosted client engagement by 30%, reflecting my focus on
                   building solutions that deliver real impact. I'm now deepening
-                  my full-stack expertise, with a growing interest in AI
-                  integrations and cloud deployments, aiming to contribute to
+                  my full-stack expertise, with a growing interest in{" "}
+                  <span>AI integrations</span> and{" "}
+                  <span>cloud deployments</span>, aiming to contribute to
                   collaborative teams building meaningful, scalable products.
+                  <br />
+                  <br />
                 </p>
                 <p>
                   Building impactful full-stack solutions with clarity and

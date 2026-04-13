@@ -51,9 +51,9 @@ const Navbar = () => {
 
   const menuItems: string[] = [
     "About",
+    "Work",
     "Skills",
     "Experience",
-    "Work",
     "Contact",
     "Blog",
   ];
@@ -120,8 +120,9 @@ const Navbar = () => {
             <div className="let_but_inner mt-[5px]">
               <p className="">
                 <a
-                  href="#letstalk"
-                  onClick={() => setActive("letstalk")}
+                  href="https://wa.me/916387726747?text=Hello%20Saqib%2C%20I%20just%20want%20to%20connect%20and%20talk%20with%20you"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`py-[10px] px-[35px] rounded-2xl border-[2px] ${
                     active === "letstalk" ? "active_letstalk" : ""
                   }`}
@@ -160,7 +161,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div> <Slide openclose={openclose} setOpenclose={setOpenclose}/></div>
+      <div>
+        {" "}
+        <Slide openclose={openclose} setOpenclose={setOpenclose} />
+      </div>
     </>
   );
 };

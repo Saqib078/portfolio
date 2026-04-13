@@ -25,7 +25,7 @@ const Card = ({
     end = (index + 1.5) / TOTAL;
   }
   else{
-    start = (index+0.4) / TOTAL;
+    start = (index+0.3) / TOTAL;
     end = (index + 1)  / TOTAL;
   }
 
@@ -36,7 +36,7 @@ const Card = ({
   );
 
   return (
-    <div className="mx-[20px] w-[90vw] h-[100vh] border-2 border-gray-600 bg-transparent flex items-center justify-center overflow-hidden">
+    <div className="mx-[20px] w-[90vw] h-[100vh] bg-transparent flex items-center justify-center overflow-hidden">
       <motion.div
         style={{ scale, filter }}
         className="w-full h-full flex items-center justify-center"
@@ -52,8 +52,8 @@ export default function Paradox() {
     <div className="h-[300vh]">
       <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[10]">
         <Card index={0}>
-          <div className="w-full h-full bg-red-400 flex items-center justify-center text-2xl">
-            <div>
+          <div className="w-full h-full flex items-center justify-center text-2xl">
+            <div className="w-full h-full overflow-hidden rounded-2xl">
               <img src={pic1} alt="" width="100%"/>
             </div>
           </div>
@@ -62,8 +62,8 @@ export default function Paradox() {
 
       <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[20]">
         <Card index={1}>
-          <div className="w-full h-full bg-blue-400 flex items-center justify-center text-2xl">
-             <div>
+          <div className="w-full h-full flex items-center justify-center text-2xl">
+             <div className="w-full h-full overflow-hidden rounded-2xl">
               <img src={pic2} alt="" width="100%"/>
             </div>
           </div>
@@ -72,8 +72,8 @@ export default function Paradox() {
 
       <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[30]">
         <Card index={2}>
-          <div className="w-full h-full bg-green-400 flex items-center justify-center text-2xl">
-             <div>
+          <div className="w-full h-full flex items-center justify-center text-2xl">
+             <div className="w-full h-full overflow-hidden rounded-2xl">
               <img src={pic3} alt="" width="100%"/>
             </div>
           </div>

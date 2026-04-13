@@ -33,7 +33,7 @@
 }
 
 .about_avatar_name p:nth-child(1) {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Fraunces", serif;
 }
 
 .about_avatar_name p:nth-child(2) {
@@ -63,4 +63,10 @@
 .about_content {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    color: #fff;
+}
+
+.about_content p span {
+    font-family: "Fraunces", serif;
+    color: #f6ae55d8;
 }

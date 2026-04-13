@@ -57,3 +57,20 @@
     border-color: #080810;
     color: #080810;
 }
+
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #5982DB; /* 👈 solid color (gradient nahi) */
+  animation: blink 1s infinite;
+}

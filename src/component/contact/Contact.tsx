@@ -4,25 +4,33 @@ import "./contact.css";
 const Contact = () => {
   return (
     <>
-      <div className="flex justify-center items-center my-[40px]">
+      <div className="flex justify-center items-center my-[140px] ">
         {/* Contact links  */}
         <div className="w-[40%]">
-          <div className="contact_content">
-            <p className="text-[18px] text-white">What is Next?</p>
-            <p className="text-[50px] text-white">Get In Touch</p>
-            <p></p>
-            <p className="text-[18px] text-gray-400 w-[60%] text-justify">
-              Although I am Always open for any new opportunities, my inbox is
-              open. Whether you have a question or just want to say hi, I will
-              try my best to get back to you!
-            </p>
+          <div className="about_head w-[80%] pb-[10px]">
+            <div className="about_head1 text-[16px] text-[#5982dbe6]">
+              <p>05 — Contact</p>
+            </div>
+            <div className="about_head2 text-[32px] text-[#fff] tracking-[1px]">
+              <p>Get in touch</p>
+            </div>
+            <div className="about_head3 text-[48px] text-[#5982dbe6]">
+              <p>Let’s work together</p>
+            </div>
+            <div className="contact_content">
+              <p className="text-[16px] text-gray-400 w-[100%] text-justify">
+                Although I am Always open for any new opportunities, my inbox is
+                open. Whether you have a question or just want to say hi, I will
+                try my best to get back to you!
+              </p>
+            </div>
           </div>
           <div className="contact_gmail mt-[40px] mb-[80px]">
             <a
               href=""
-              className="text-white flex justify-between items-center w-[50%] border-b border-gray pb-2 hover:text-blue-300 hover:border-blue-300"
+              className="text-white flex justify-between items-center w-[70%] border-b border-gray pb-2 hover:text-blue-300 hover:border-blue-300"
             >
-              <p className="text-[28px]">replysaqib123@gmail.com</p>
+              <p className="text-[24px]">replysaqib123@gmail.com</p>
               <p className="">
                 <RiExternalLinkLine size="20px" />
               </p>
@@ -31,7 +39,7 @@ const Contact = () => {
           <div className="contact_links_container">
             <a
               href=""
-              className="contact_connect_link flex justify-between items-start w-[50%] border-b border-gray pb-2"
+              className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>Github</p>
               <p>
@@ -41,7 +49,7 @@ const Contact = () => {
 
             <a
               href=""
-              className="contact_connect_link flex justify-between items-start w-[50%] border-b border-gray pb-2"
+              className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>LinkedIn</p>
               <p>
@@ -50,7 +58,7 @@ const Contact = () => {
             </a>
             <a
               href=""
-              className="contact_connect_link flex justify-between items-start w-[50%] border-b border-gray pb-2"
+              className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>Other Portfolio</p>
               <p>
@@ -59,7 +67,7 @@ const Contact = () => {
             </a>
             <a
               href=""
-              className="contact_connect_link flex justify-between items-start w-[50%] border-b border-gray pb-2"
+              className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>Resume</p>
               <p>
@@ -68,7 +76,7 @@ const Contact = () => {
             </a>
             <a
               href=""
-              className="contact_connect_link flex justify-between items-start w-[50%] border-b border-gray pb-2"
+              className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>Cover Page</p>
               <p>

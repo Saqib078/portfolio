@@ -7,20 +7,33 @@ const Experience = () => {
     "Developed and optimized responsive, cross-browser interfaces using ReactJS, JavaScript, HTML5, and CSS3, enhancing usability and performance across devices.",
     "Integrated real-time data synchronization and secure authentication using Firebase, while managing MySQL databases to ensure reliable and scalable functionality.",
     "Deployed multiple applications via Firebase Hosting, Hostinger, cPanel and traditional servers, ensuring seamless performance and broad accessibility.",
-    "Delivered 15+ projects and actively contributed to team-based coding challenges, strengthening problem-solving skills and fostering collaboration. Applied Agile methodologies including stand-ups, sprint planning, and retrospectives, maintaining clean, high-quality code with Git and GitHub.",
-    "Leveraged tools such as VS Code, Postman, npm/yarn, Firebase Console, and MySQL Workbench to streamline workflows.",
-    "Enhanced communication, adaptability, and teamwork by collaborating with mentors and cross-functional teams, contributing to a productive work environment.",
   ];
 
   const companyDetails2: string[] = [
     "Delivered practical assignments and contributed to multiple mini-projects, strengthening foundations in software development andanalytical problem-solving.",
     "Collaborated with cross-functional teams on frontend development using ReactJS, delivering responsive, user-friendly interfaces that improved usability across multiple devices.",
-    "Integrated backend services with Firebase and maintained version control with Git, applying Agile methodologies to ensure structured, efficient, and reliable workflows.",
-    "Enhanced adaptability, teamwork, and technical proficiency through hands-on experience with modern tools in collaborative development environments.",
+  ];
+
+  const companyDetails3: string[] = [
+    "Initiated my software engineering journey during B.Tech by actively exploring web development and programming fundamentals through self-learning and structured online courses.",
+    "Built a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React.js by working on multiple personal and guided projects.",
   ];
   return (
     <>
-      <div className="flex justify-center w-[100%]">
+      <div className="flex justify-center pt-[60px] bg-[#0d0d1a]">
+        <div className="about_head w-[70%] pb-[10px]">
+          <div className="about_head1 text-[16px] text-[#5982dbe6]">
+            <p>04 — Career</p>
+          </div>
+          <div className="about_head2 text-[32px] text-[#fff] tracking-[1px]">
+            <p>Building my path</p>
+          </div>
+          <div className="about_head3 text-[48px] text-[#5982dbe6]">
+            <p>Through Experience</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center w-[100%] bg-[#0d0d1a] pb-[50px]">
         <div className="w-[60%]">
           <div className="flex">
             <div className="relative flex flex-col items-center mr-6 mt-[130px]">
@@ -31,7 +44,10 @@ const Experience = () => {
               </span>
 
               {/* 📏 Animated Line */}
-              <span className="w-[2px] h-full bg-blue-500 mt-1 origin-top animate-growLine"  style={{ animationDelay: "1s" }}></span>
+              <span
+                className="w-[2px] h-full bg-blue-500 mt-1 origin-top animate-growLine"
+                style={{ animationDelay: "1s" }}
+              ></span>
             </div>
             <div className="bg-[#ffffff14] rounded-[20px] py-[20px] px-[40px] m-[40px] mt-[90px] mb-[95px]">
               <div className="flex justify-between text-white p-[20px]">
@@ -88,7 +104,10 @@ const Experience = () => {
               </span>
 
               {/* 📏 Animated Line */}
-              <span className="w-[2px] h-full bg-blue-500 mt-1 origin-top animate-growLine"  style={{ animationDelay: "5s" }}></span>
+              <span
+                className="w-[2px] h-full bg-blue-500 mt-1 origin-top animate-growLine"
+                style={{ animationDelay: "5s" }}
+              ></span>
             </div>
             <div className="bg-[#ffffff14] rounded-[20px] py-[20px] px-[40px] m-[40px] mt-0">
               <div className="flex justify-between text-white p-[20px]">
@@ -125,6 +144,51 @@ const Experience = () => {
               <div className="p-5 details_company">
                 <ul className="list-disc pl-5">
                   {companyDetails2.map((item, index) => (
+                    <li
+                      key={index}
+                      className="text-gray-300 leading-relaxed hover:text-white transition-all duration-200"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="flex">
+            <div className="relative flex flex-col items-center mr-6">
+              {/* 💥 Pataka Dot */}
+              <span className="relative flex h-4 w-4">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-75 animate-ping"></span>
+                <span className="relative inline-flex rounded-full h-4 w-4 bg-gray-500 shadow-lg"></span>
+              </span>
+            </div>
+            <div className="bg-[#ffffff14] rounded-[20px] py-[20px] px-[40px] m-[40px] mt-0">
+              <div className="flex justify-between text-white p-[20px]">
+                <div className="flex items-center">
+                  <div className="pl-[20px]">
+                    <div className="flex pb-[4px] items-end ">
+                      <div className="text-[22px] company_name font-extrabold">
+                        <p>Initiated my software engineering journey</p>
+                      </div>
+                    </div>
+                    <div className="company_position text-[20px] text-gray-300 uppercase">
+                      <p>
+                       INDEPENDENT LEARNING & INTERNSHIPS
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="company_date text-[20px] text-gray-300 uppercase">
+                  <p>2020 - 2023</p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <hr className="w-[95%]" />
+              </div>
+              <div className="p-5 details_company">
+                <ul className="list-disc pl-5">
+                  {companyDetails3.map((item, index) => (
                     <li
                       key={index}
                       className="text-gray-300 leading-relaxed hover:text-white transition-all duration-200"

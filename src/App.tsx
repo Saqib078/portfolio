@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import About from "./component/About/About";
 import Contact from "./component/contact/Contact";
 import Experience from "./component/experience/Experience";
@@ -13,11 +14,51 @@ function App() {
       <div>
         <Navbar />
         <Hero />
-        <About />
-        <Work />
-        <Skills/>
-        <Experience/>
-        <Contact/>
+        <motion.section
+          id="About"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4 }}
+          viewport={{ once: false }}
+        >
+          <About />
+        </motion.section>
+        <motion.section
+          id="Work"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4 }}
+          viewport={{ once: false }}
+        >
+          <Work />
+        </motion.section>
+        <motion.section
+          id="Skills"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4 }}
+          viewport={{ once: false }}
+        >
+          <Skills />
+        </motion.section>
+        <motion.section
+          id="Experience"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4 }}
+          viewport={{ once: false }}
+        >
+          <Experience />
+        </motion.section>
+        <motion.section
+          id="Contact"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4 }}
+          viewport={{ once: false }}
+        >
+          <Contact />
+        </motion.section>
         <Footer />
       </div>
     </>
