@@ -1,7 +1,7 @@
 import Meteor from "../animation/Metero";
 import "./hero.css";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Resume from '../../assets/Resume_replysaqib123@gmail.pdf'
 
 const texts = [
   "I turn ideas into reality.",
@@ -12,6 +12,18 @@ const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
+   const [downloaded, setDownloaded] = useState(false);
+
+  const handleDownload = () => {
+    // download trigger
+    const link = document.createElement("a");
+    link.href = Resume; // 👈 apna resume path yaha daalo
+    link.download = "My_Resume.pdf";
+    link.click();
+
+    // state change for animation
+    setDownloaded(true);
+  };
 
   useEffect(() => {
     if (charIndex < texts[textIndex].length) {
@@ -70,7 +82,31 @@ const Hero = () => {
               </p>
             </div>
             <div className="button_resume flex mt-[25px]">
-              <p>Check Out My Resume</p>
+              <p
+                onClick={handleDownload}
+                className={`relative overflow-hidden px-6 py-3 rounded-xl font-medium transition-all duration-500 
+        ${
+          downloaded
+            ? "bg-green-500 text-white scale-105"
+            : "bg-black text-white hover:bg-gray-800"
+        }`}
+              >
+                <span
+                  className={`transition-all duration-500 ${
+                    downloaded ? "opacity-0" : "opacity-100"
+                  }`}
+                >
+                  Check Out My Resume
+                </span>
+
+                <span
+                  className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+                    downloaded ? "opacity-100 scale-100" : "opacity-0 scale-50"
+                  }`}
+                >
+                  ✅ Downloaded
+                </span>
+              </p>
             </div>
           </div>
         </div>

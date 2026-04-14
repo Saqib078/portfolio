@@ -60,7 +60,7 @@ const About = () => {
                   <p className="text-[#5982dbe6] tracking-[2px]">
                     Syed Saqib Ali
                   </p>
-                  <p className="text-[#8b5cf6]">Full-Stack Developer</p>
+                  <p className="text-[#8b5cf6]">Front-End Developer</p>
                   <p className="text-green-500">Open to work</p>
                 </div>
               </div>

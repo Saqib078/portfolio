@@ -1,7 +1,22 @@
 import { RiExternalLinkLine } from "react-icons/ri";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import "./contact.css";
+import { useState } from "react";
+import Resume from "../../assets/Resume_replysaqib123@gmail.pdf";
 const Contact = () => {
+  const [downloaded, setDownloaded] = useState(false);
+
+  const handleDownload = () => {
+    // download trigger
+    const link = document.createElement("a");
+    link.href = Resume; // 👈 apna resume path yaha daalo
+    link.download = "My_Resume.pdf";
+    link.click();
+
+    // state change for animation
+    setDownloaded(true);
+  };
+
   return (
     <>
       <div className="flex justify-center items-center my-[140px] ">
@@ -27,7 +42,7 @@ const Contact = () => {
           </div>
           <div className="contact_gmail mt-[40px] mb-[80px]">
             <a
-              href=""
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=replysaqib123@gmail.com&su=Regarding%20Opportunity&body=Hello%20Saqib,%0A%0AI%20would%20like%20to%20connect%20with%20you."
               className="text-white flex justify-between items-center w-[70%] border-b border-gray pb-2 hover:text-blue-300 hover:border-blue-300"
             >
               <p className="text-[24px]">replysaqib123@gmail.com</p>
@@ -38,7 +53,8 @@ const Contact = () => {
           </div>
           <div className="contact_links_container">
             <a
-              href=""
+              href="https://github.com/Saqib078"
+              target="__blank"
               className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>Github</p>
@@ -48,7 +64,8 @@ const Contact = () => {
             </a>
 
             <a
-              href=""
+              href="https://www.linkedin.com/in/syed-saqib-ali-9b2033234"
+              target="__blank"
               className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>LinkedIn</p>
@@ -66,7 +83,8 @@ const Contact = () => {
               </p>
             </a>
             <a
-              href=""
+              onClick={handleDownload}
+              href="#Resume"
               className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
               <p>Resume</p>
@@ -74,7 +92,7 @@ const Contact = () => {
                 <LiaFileDownloadSolid />
               </p>
             </a>
-            <a
+            {/* <a
               href=""
               className="contact_connect_link flex justify-between items-start w-[70%] border-b border-gray pb-2"
             >
@@ -82,7 +100,7 @@ const Contact = () => {
               <p>
                 <LiaFileDownloadSolid />
               </p>
-            </a>
+            </a> */}
           </div>
         </div>
         {/* Form */}

@@ -120,7 +120,7 @@ const Navbar = () => {
             <div className="let_but_inner mt-[5px]">
               <p className="">
                 <a
-                  href="https://wa.me/916387726747?text=Hello%20Saqib%2C%20I%20just%20want%20to%20connect%20and%20talk%20with%20you"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=replysaqib123@gmail.com&su=Regarding%20Opportunity&body=Hello%20Saqib,%0A%0AI%20would%20like%20to%20connect%20with%20you."
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`py-[10px] px-[35px] rounded-2xl border-[2px] ${

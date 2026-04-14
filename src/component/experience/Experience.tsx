@@ -61,7 +61,7 @@ const Experience = () => {
                         <p>Technovel</p>
                       </div>
                       <div className="text-[14px] text-gray-400 p-[5px] company_link">
-                        <a href="">(Technovel.in)</a>
+                        <a href="https://technovel.in/">(Technovel.in)</a>
                       </div>
                     </div>
                     <div className="company_position text-[20px] text-gray-300 uppercase">
@@ -121,7 +121,7 @@ const Experience = () => {
                         <p>XenonStack</p>
                       </div>
                       <div className="text-[14px] text-gray-400 p-[5px] company_link">
-                        <a href="">(xenonstack.com)</a>
+                        <a href="https://www.xenonstack.com/">(xenonstack.com)</a>
                       </div>
                     </div>
                     <div className="company_position text-[20px] text-gray-300 uppercase">

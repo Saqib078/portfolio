@@ -7,13 +7,16 @@ import Hero from "./component/hero/Hero";
 import Navbar from "./component/Navbar/Navbar";
 import Skills from "./component/skills/Skills";
 import Work from "./component/Work/Work";
+import SplashCursor from "./component/animation/SplashCursor";
 
 function App() {
   return (
     <>
       <div>
+        <SplashCursor/>
         <Navbar />
         <Hero />
+        <div className="bg-image"></div>
         <motion.section
           id="About"
           initial={{ opacity: 0, y: 60 }}
