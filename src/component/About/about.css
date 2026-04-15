@@ -17,18 +17,14 @@
     padding: 50px;
     margin-left: 40px;
     height: 500px;
-
 }
-
 
 .about_content_box2 {
     background-color: #5982db1a;
     border: 5px solid #5982db3d;
     overflow: hidden;
     max-width: 200px;
-    /* optional */
     aspect-ratio: 1 / 1;
-    /* height auto equal ho jayegi */
     border-radius: 50%;
 }
 
@@ -69,4 +65,51 @@
 .about_content p span {
     font-family: "Fraunces", serif;
     color: #f6ae55d8;
+}
+
+
+/*  */
+@media (max-width: 1650px) {
+    .about_content_box {
+        padding: 40px 50px;
+    }
+
+    .about_content_box3 {
+        padding: 40px;
+        margin-left: 40px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .about_content_box {
+        padding: 30px 40px;
+    }
+
+    .about_content_box3 {
+        padding: 30px;
+        margin-left: 30px;
+        height: 350px;
+    }
+
+    .about_content_box2 {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 720px) {
+    .about_content_box3 {
+        margin-left: 0px;
+        height: 300px;
+    }
+
+    .about_content_box2 {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 550px) {
+    .about_content_box {
+        padding: 15px 20px;
+    }
 }

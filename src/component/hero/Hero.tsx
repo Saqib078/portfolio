@@ -1,7 +1,7 @@
 import Meteor from "../animation/Metero";
 import "./hero.css";
 import { useEffect, useState } from "react";
-import Resume from '../../assets/Resume_replysaqib123@gmail.pdf'
+import Resume from "../../assets/Resume_replysaqib123@gmail.pdf";
 
 const texts = [
   "I turn ideas into reality.",
@@ -12,7 +12,7 @@ const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
-   const [downloaded, setDownloaded] = useState(false);
+  const [downloaded, setDownloaded] = useState(false);
 
   const handleDownload = () => {
     // download trigger
@@ -21,7 +21,6 @@ const Hero = () => {
     link.download = "My_Resume.pdf";
     link.click();
 
-    // state change for animation
     setDownloaded(true);
   };
 
@@ -30,11 +29,10 @@ const Hero = () => {
       const timeout = setTimeout(() => {
         setDisplayText((prev) => prev + texts[textIndex][charIndex]);
         setCharIndex((prev) => prev + 1);
-      }, 80); // 🔥 typing speed (slow/fast yahan control karo)
+      }, 80);
 
       return () => clearTimeout(timeout);
     } else {
-      // jab pura text likh jaye → wait karo → next text
       const timeout = setTimeout(() => {
         setDisplayText("");
         setCharIndex(0);
@@ -44,25 +42,26 @@ const Hero = () => {
       return () => clearTimeout(timeout);
     }
   }, [charIndex, textIndex]);
+
   return (
     <>
-      <div className=" relative  overflow-hidden">
+      <div className="relative overflow-hidden">
         <Meteor />
         <div className="h-[90vh] w-full items-center flex justify-center ">
-          <div className="w-[60%]">
-            <div className="hero_context1 text-[17px] text-[#8A2BE2]">
+          <div className="max-[720px]:w-[82%]  max-[1450px]:w-[72%] w-[60%]">
+            <div className="hero_context1 max-[560px]:text-[7px] max-[720px]:text-[9px] max-[950px]:text-[10px] max-[1250px]:text-[12px] max-[1650px]:text-[15px] text-[17px] text-[#8A2BE2]">
               <p>Hi , my name is</p>
             </div>
-            <div className="hero_context2 text-[70px] text-[#5982dbe6]">
+            <div className="hero_context2 max-[560px]:text-[22px] max-[720px]:text-[28px] max-[950px]:text-[35px] max-[1250px]:text-[40px] max-[1650px]:text-[50px] text-[70px] text-[#5982dbe6]">
               <p>Syed Saqib Ali</p>
             </div>
-            <div className="hero_context3 h-[70px] text-[45px] bg-gradient-to-r from-[#5982DB] to-[#8A2BE2] bg-clip-text text-transparent">
+            <div className="hero_context3 max-[950px]:h-[35px] max-[1250px]:h-[40px] max-[1650px]:h-[50px] h-[65px] max-[560px]:text-[16px] max-[720px]:text-[20px] max-[950px]:text-[24px] max-[1250px]:text-[28px] max-[1650px]:text-[32px] text-[45px] bg-gradient-to-r from-[#5982DB] to-[#8A2BE2] bg-clip-text text-transparent">
               <p>
                 {displayText}
                 <span className="cursor">|</span>
               </p>
             </div>
-            <div className="hero_context4 text-justify text-[22px] text-[#5982dbe6]">
+            <div className="hero_context4 text-justify max-[560px]:text-[12px] max-[720px]:text-[14px] max-[1250px]:text-[15px] max-[1650px]:text-[17px] text-[22px] text-[#5982dbe6]">
               <p>
                 I am a <span> Software Engineer</span> with strong{" "}
                 <span> problem-solving skills</span>, specializing in creating
@@ -84,12 +83,7 @@ const Hero = () => {
             <div className="button_resume flex mt-[25px]">
               <p
                 onClick={handleDownload}
-                className={`relative overflow-hidden px-6 py-3 rounded-xl font-medium transition-all duration-500 
-        ${
-          downloaded
-            ? "bg-green-500 text-white scale-105"
-            : "bg-black text-white hover:bg-gray-800"
-        }`}
+                className={`relative overflow-hidden transition-all duration-500`}
               >
                 <span
                   className={`transition-all duration-500 ${

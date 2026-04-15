@@ -52,6 +52,35 @@
     transition: background-position 0.5s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+@media (max-width: 1650px) {
+    .button_resume p {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 950px) {
+    .button_resume p {
+        padding: 7px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 720px) {
+    .button_resume p {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    .button_resume p {
+        padding: 7px 13px;
+        font-size: 10px;
+    }
+}
+
+
 .button_resume p:hover {
     background-position: left bottom;
     border-color: #080810;
@@ -60,17 +89,21 @@
 
 
 @keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .cursor {
-  display: inline-block;
-  margin-left: 4px;
-  color: #5982DB; /* 👈 solid color (gradient nahi) */
-  animation: blink 1s infinite;
+    display: inline-block;
+    margin-left: 4px;
+    color: #5982DB;
+    /* 👈 solid color (gradient nahi) */
+    animation: blink 1s infinite;
 }
