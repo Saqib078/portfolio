@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.contact_content , .contact_gmail , .contact_connect_link{
+.contact_content,
+.contact_gmail,
+.contact_connect_link {
     font-family: "Roboto", sans-serif;
 }
+
 .contact_connect_link {
     font-size: 16px;
     color: rgb(190, 179, 179);
     text-transform: uppercase;
     margin-top: 40px;
 }
+
 .contact_connect_link:hover {
     color: #fff;
+}
+
+@media (max-width: 1450px) {
+    .contact_connect_link {
+        font-size: 14px;
+    }
+}
+@media (max-width: 950px) {
+    .contact_connect_link {
+        font-size: 12px;
+    }
 }

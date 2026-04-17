@@ -7,7 +7,6 @@ import pic3 from "../../assets/Screenshot (167).png";
 import pic4 from "../../assets/mobile_screen (1).jpeg";
 import pic5 from "../../assets/mobile_screen (2).jpeg";
 import pic6 from "../../assets/mobile_screen (3).jpeg";
-import { useEffect, useState } from "react";
 
 const TOTAL = 3;
 
@@ -18,50 +17,17 @@ const Card = ({
   children: React.ReactNode;
   index: number;
 }) => {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const { scrollYProgress } = useScroll();
 
   let start = 0;
   let end = 0;
 
-  // 👇 Responsive logic
-  if (width > 1650) {
-    // large screens (your current logic)
-    if (index === 0) {
-      start = (index + 1) / TOTAL;
-      end = (index + 1.5) / TOTAL;
-    } else {
-      start = (index + 0.3) / TOTAL;
-      end = (index + 1) / TOTAL;
-    }
-  } else if (width > 1024) {
-    // medium screens
-    if (index === 0) {
-      start = (index + 0.8) / TOTAL;
-      end = (index + 1.2) / TOTAL;
-    } else {
-      start = (index + 0.1) / TOTAL;
-      end = (index + 0.9) / TOTAL;
-    }
+  if (index === 0) {
+    start = (index + 1) / TOTAL;
+    end = (index + 1.5) / TOTAL;
   } else {
-    // small screens (mobile/tablet)
-    if (index === 0) {
-      start = (index + 0.8) / TOTAL;
-      end = (index + 1) / TOTAL;
-    } else {
-      start = (index - 0.1) / TOTAL;
-      end = (index + 0.8) / TOTAL;
-    }
+    start = (index + 0.3) / TOTAL;
+    end = (index + 1) / TOTAL;
   }
   const scale = useTransform(scrollYProgress, [start, end], [1, 0.6]);
   const filter = useTransform(
