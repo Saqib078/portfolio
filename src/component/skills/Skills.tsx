@@ -31,14 +31,14 @@ const Skills = () => {
   return (
     <>
       <div className="flex justify-center pt-[60px]">
-        <div className="about_head w-[70%] pb-[60px]">
-          <div className="about_head1 text-[16px] text-[#5982dbe6]">
+        <div className="about_head max-[950px]:w-[90%] max-[1400px]:w-[80%] w-[70%] pb-[60px]">
+          <div className="about_head1 max-[500px]:text-[10px] max-[650px]:text-[11px] max-[1250px]:text-[12px] max-[1650px]:text-[14px] text-[16px] text-[#5982dbe6]">
             <p>03 — Tech Stack</p>
           </div>
-          <div className="about_head2 text-[32px] text-[#fff] tracking-[1px]">
+          <div className="about_head2 max-[500px]:text-[18px] max-[650px]:text-[20px] max-[850px]:text-[22px] max-[1250px]:text-[24px] max-[1650px]:text-[28px] text-[32px] text-[#fff] tracking-[1px]">
             <p>Powered by latest</p>
           </div>
-          <div className="about_head3 text-[48px] text-[#5982dbe6]">
+          <div className="about_head3 max-[500px]:text-[23px] max-[650px]:text-[26px] max-[850px]:text-[29px] max-[1250px]:text-[32px] max-[1650px]:text-[38px] text-[48px] text-[#5982dbe6]">
             <p>Technologies</p>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Skills = () => {
 
       <div className=" pb-[70px]">
         <div className="flex justify-center">
-          <div className="image_container">
+          <div className="image_container image_conatiner_hide2">
             <div className="image_style bg-white rounded">
               <img src={logo18} alt="" width="100%" />
             </div>
@@ -54,7 +54,7 @@ const Skills = () => {
               <p>ThreeJs</p>
             </div>
           </div>
-          <div className="image_container">
+          <div className="image_container image_conatiner_hide1">
             <div className="image_style">
               <img src={logo19} alt="" width="100%" />
             </div>
@@ -62,7 +62,7 @@ const Skills = () => {
               <p>Vite</p>
             </div>
           </div>
-          <div className="image_container">
+          <div className="image_container image_conatiner_hide1">
             <div className="image_style">
               <img src={logo3} alt="" width="100%" />
             </div>
@@ -70,7 +70,7 @@ const Skills = () => {
               <p>Html5</p>
             </div>
           </div>
-          <div className="image_container">
+          <div className="image_container image_container_hide4">
             <div className="image_style">
               <img src={logo4} alt="" width="100%" />
             </div>
@@ -94,7 +94,7 @@ const Skills = () => {
               <p>ReactJs</p>
             </div>
           </div>
-          <div className="image_container">
+          <div className="image_container image_conatiner_hide3">
             <div className="image_style">
               <img src={logo7} alt="" width="100%" />
             </div>
@@ -136,7 +136,15 @@ const Skills = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="image_container">
+          <div className="image_container image_conatiner_showhide1">
+            <div className="image_style">
+              <img src={logo19} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>Vite</p>
+            </div>
+          </div>
+          <div className="image_container image_container_hide4">
             <div className="image_style">
               <img src={logo26} alt="" width="100%" height="100%" />
             </div>
@@ -202,6 +210,22 @@ const Skills = () => {
           </div>
         </div>
         <div className="flex justify-center">
+          <div className="image_container image_container_show4">
+            <div className="image_style">
+              <img src={logo4} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>Javascript</p>
+            </div>
+          </div>
+          <div className="image_container image_conatiner_showhide1">
+            <div className="image_style">
+              <img src={logo3} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>Html5</p>
+            </div>
+          </div>
           <div className="image_container">
             <div className="image_style">
               <img src={logo22} alt="" width="100%" />
@@ -240,6 +264,48 @@ const Skills = () => {
             </div>
             <div className="text-white Logo_name">
               <p>Firebase</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center image_conatiner_hidediv">
+          <div className="image_container image_container_show4">
+            <div className="image_style">
+              <img src={logo26} alt="" width="100%" height="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>MongoDB</p>
+            </div>
+          </div>
+          <div className="image_container">
+            <div className="image_style">
+              <img src={logo3} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>Html5</p>
+            </div>
+          </div>
+          <div className="image_container">
+            <div className="image_style">
+              <img src={logo19} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>Vite</p>
+            </div>
+          </div>
+          <div className="image_container">
+            <div className="image_style bg-white rounded">
+              <img src={logo18} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>ThreeJs</p>
+            </div>
+          </div>
+          <div className="image_container image_container_div_imagehide">
+            <div className="image_style">
+              <img src={logo7} alt="" width="100%" />
+            </div>
+            <div className="text-white Logo_name">
+              <p>CSS</p>
             </div>
           </div>
         </div>

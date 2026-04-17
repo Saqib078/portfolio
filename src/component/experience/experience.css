@@ -2,11 +2,35 @@
 
 .details_company ul li {
     padding: 5px;
-    /* color: #fff; */
     font-family: "Cormorant Garamond", serif;
     font-size: 22px;
     text-align: justify;
 }
+
+@media (max-width: 1720px) {
+    .details_company ul li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .details_company ul li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 850px) {
+    .details_company ul li {
+        font-size: 14px;
+    }
+} 
+
+@media (max-width: 700px) {
+    .details_company ul li {
+        font-size: 12px;
+    }
+} 
+
 
 .company_name p {
     font-family: "Cormorant Garamond", serif;

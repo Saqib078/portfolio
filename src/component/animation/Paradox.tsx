@@ -1,10 +1,13 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import pic1 from '../../assets/Screenshot (164).png';
-import pic2 from '../../assets/Screenshot (166).png';
-import pic3 from '../../assets/Screenshot (167).png';
-
+import pic1 from "../../assets/Screenshot (164).png";
+import pic2 from "../../assets/Screenshot (166).png";
+import pic3 from "../../assets/Screenshot (167).png";
+import pic4 from "../../assets/mobile_screen (1).jpeg";
+import pic5 from "../../assets/mobile_screen (2).jpeg";
+import pic6 from "../../assets/mobile_screen (3).jpeg";
+import { useEffect, useState } from "react";
 
 const TOTAL = 3;
 
@@ -15,20 +18,51 @@ const Card = ({
   children: React.ReactNode;
   index: number;
 }) => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const { scrollYProgress } = useScroll();
 
   let start = 0;
   let end = 0;
 
-  if (index == 0) {
-    start = (index + 1) / TOTAL;
-    end = (index + 1.5) / TOTAL;
+  // 👇 Responsive logic
+  if (width > 1650) {
+    // large screens (your current logic)
+    if (index === 0) {
+      start = (index + 1) / TOTAL;
+      end = (index + 1.5) / TOTAL;
+    } else {
+      start = (index + 0.3) / TOTAL;
+      end = (index + 1) / TOTAL;
+    }
+  } else if (width > 1024) {
+    // medium screens
+    if (index === 0) {
+      start = (index + 0.8) / TOTAL;
+      end = (index + 1.2) / TOTAL;
+    } else {
+      start = (index + 0.1) / TOTAL;
+      end = (index + 0.9) / TOTAL;
+    }
+  } else {
+    // small screens (mobile/tablet)
+    if (index === 0) {
+      start = (index + 0.8) / TOTAL;
+      end = (index + 1) / TOTAL;
+    } else {
+      start = (index - 0.1) / TOTAL;
+      end = (index + 0.8) / TOTAL;
+    }
   }
-  else{
-    start = (index+0.3) / TOTAL;
-    end = (index + 1)  / TOTAL;
-  }
-
   const scale = useTransform(scrollYProgress, [start, end], [1, 0.6]);
   const filter = useTransform(
     scale,
@@ -50,31 +84,53 @@ const Card = ({
 export default function Paradox() {
   return (
     <div className="h-[300vh]">
-      <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[10]">
+      <div className="sticky top-0 max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[10]">
         <Card index={0}>
           <div className="w-full h-full flex items-center justify-center text-2xl">
-            <div className="w-full h-full overflow-hidden rounded-2xl">
-              <img src={pic1} alt="" width="100%"/>
+            <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
+              <img
+                src={pic1}
+                alt=""
+                width="100%"
+                height="100%"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full h-full overflow-hidden hidden rounded-2xl hidden max-[920px]:block">
+              <img src={pic4} alt="" width="100%" />
             </div>
           </div>
         </Card>
       </div>
 
-      <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[20]">
+      <div className="sticky top-0 max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[20]">
         <Card index={1}>
           <div className="w-full h-full flex items-center justify-center text-2xl">
-             <div className="w-full h-full overflow-hidden rounded-2xl">
-              <img src={pic2} alt="" width="100%"/>
+            <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
+              <img
+                src={pic2}
+                alt=""
+                width="100%"
+                height="100%"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
+              <img src={pic5} alt="" width="100%" />
             </div>
           </div>
         </Card>
       </div>
 
-      <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[30]">
+      <div className="sticky top-0 max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[30]">
         <Card index={2}>
           <div className="w-full h-full flex items-center justify-center text-2xl">
-             <div className="w-full h-full overflow-hidden rounded-2xl">
-              <img src={pic3} alt="" width="100%"/>
+            <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
+              <img src={pic3} alt="" className="w-full h-full object-cover" />
+            </div>
+
+            <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
+              <img src={pic6} alt="" className="w-full" />
             </div>
           </div>
         </Card>
