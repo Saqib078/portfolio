@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
-import './metero.css';
+import "./metero.css";
 
 export default function Loading() {
   const progress = useMotionValue(0);
@@ -61,8 +61,12 @@ export default function Loading() {
       {done && (
         <motion.div
           initial={{ scale: 0.2, borderRadius: "999px" }}
-          animate={{ scale: 20, borderRadius: "0px" }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          animate={{
+            height: "100vh",
+            scale: 20,
+            borderRadius: "0px",
+          }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute top-1/2 left-1/2 w-80 h-12 bg-[#080810] -translate-x-1/2 -translate-y-1/2"
         />
       )}
@@ -75,7 +79,9 @@ export default function Loading() {
           transition={{ delay: 0.8 }}
           className="loading_text absolute inset-0 flex items-center justify-center"
         >
-          <h1 className="loading_text  text-[#5982dbe6] text-4xl">Welcome to My Portfolio</h1>
+          <h1 className="loading_text text-[#5982dbe6] text-4xl">
+            Welcome to My Portfolio
+          </h1>
         </motion.div>
       )}
     </div>
