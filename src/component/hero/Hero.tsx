@@ -47,21 +47,21 @@ const Hero = () => {
     <>
       <div className="relative overflow-hidden">
         <Meteor />
-        <div className="h-[90vh] w-full items-center flex justify-center ">
+        <div className="max-[720px]:h-[75vh] h-[90vh] w-full items-center flex justify-center ">
           <div className="max-[720px]:w-[82%]  max-[1450px]:w-[72%] w-[60%]">
-            <div className="hero_context1 max-[560px]:text-[7px] max-[720px]:text-[9px] max-[950px]:text-[10px] max-[1250px]:text-[12px] max-[1650px]:text-[15px] text-[17px] text-[#8A2BE2]">
+            <div className="hero_context1 max-[720px]:text-[9px] max-[950px]:text-[10px] max-[1250px]:text-[12px] max-[1650px]:text-[15px] text-[17px] text-[#8A2BE2]">
               <p>Hi , my name is</p>
             </div>
-            <div className="hero_context2 max-[560px]:text-[22px] max-[720px]:text-[28px] max-[950px]:text-[35px] max-[1250px]:text-[40px] max-[1650px]:text-[50px] text-[70px] text-[#5982dbe6]">
+            <div className="hero_context2 max-[560px]:text-[24px] max-[720px]:text-[28px] max-[950px]:text-[35px] max-[1250px]:text-[40px] max-[1650px]:text-[50px] text-[70px] text-[#5982dbe6]">
               <p>Syed Saqib Ali</p>
             </div>
-            <div className="hero_context3 max-[950px]:h-[35px] max-[1250px]:h-[40px] max-[1650px]:h-[50px] h-[65px] max-[560px]:text-[16px] max-[720px]:text-[20px] max-[950px]:text-[24px] max-[1250px]:text-[28px] max-[1650px]:text-[32px] text-[45px] bg-gradient-to-r from-[#5982DB] to-[#8A2BE2] bg-clip-text text-transparent">
+            <div className="hero_context3 max-[950px]:h-[35px] max-[1250px]:h-[40px] max-[1650px]:h-[50px] h-[65px] max-[560px]:text-[20px] max-[720px]:text-[20px] max-[950px]:text-[24px] max-[1250px]:text-[28px] max-[1650px]:text-[32px] text-[45px] bg-gradient-to-r from-[#5982DB] to-[#8A2BE2] bg-clip-text text-transparent">
               <p>
                 {displayText}
                 <span className="cursor">|</span>
               </p>
             </div>
-            <div className="hero_context4 text-justify max-[560px]:text-[12px] max-[720px]:text-[14px] max-[1250px]:text-[15px] max-[1650px]:text-[17px] text-[22px] text-[#5982dbe6]">
+            <div className="hero_context4 text-justify max-[720px]:text-[14px] max-[1250px]:text-[15px] max-[1650px]:text-[17px] text-[22px] text-[#5982dbe6]">
               <p>
                 I am a <span> Software Engineer</span> with strong{" "}
                 <span> problem-solving skills</span>, specializing in creating
@@ -70,14 +70,6 @@ const Hero = () => {
                 diverse range of technologies, including{" "}
                 <span> traditional web applications</span>, and I am actively
                 exploring <span> Web3 technologies</span>.
-                {/*  I enjoy solving
-                challenging projects that drive <span> innovation</span> and */}
-                {/* deliver high-quality results. Through my JOB, I developed my
-                ability to collaborate effectively and translate{" "}
-                <span> ideas into functional solutions</span>. I actively seek
-                dynamic projects where I can contribute to pushing the
-                boundaries of technology and drive
-                <span> impactful innovation</span>. */}
               </p>
             </div>
             <div className="button_resume flex mt-[25px]">

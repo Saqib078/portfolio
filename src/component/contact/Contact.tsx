@@ -1,10 +1,9 @@
 import { RiExternalLinkLine } from "react-icons/ri";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import "./contact.css";
-import { useState } from "react";
+
 import Resume from "../../assets/Resume_replysaqib123@gmail.pdf";
 const Contact = () => {
-  const [downloaded, setDownloaded] = useState(false);
 
   const handleDownload = () => {
     // download trigger
@@ -13,8 +12,7 @@ const Contact = () => {
     link.download = "My_Resume.pdf";
     link.click();
 
-    // state change for animation
-    setDownloaded(true);
+
   };
 
   return (

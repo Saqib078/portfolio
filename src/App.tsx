@@ -8,6 +8,7 @@ import Navbar from "./component/Navbar/Navbar";
 import Skills from "./component/skills/Skills";
 import Work from "./component/Work/Work";
 import SplashCursor from "./component/animation/SplashCursor";
+import Loading from "./component/animation/Loading";
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
           <Contact />
         </motion.section>
         <Footer />
+        <Loading/>
       </div>
     </>
   );

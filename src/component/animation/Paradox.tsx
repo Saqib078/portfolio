@@ -36,7 +36,7 @@ const Card = ({
   );
 
   return (
-    <div className="mx-[20px] w-[90vw] h-[100vh] bg-transparent flex items-center justify-center overflow-hidden">
+    <div className="mx-[20px] w-[90vw] max-[720px]:h-[75vh] max-[920px]:h-[90vh] h-[100vh] bg-transparent flex items-center justify-center overflow-hidden">
       <motion.div
         style={{ scale, filter }}
         className="w-full h-full flex items-center justify-center"
@@ -49,8 +49,8 @@ const Card = ({
 
 export default function Paradox() {
   return (
-    <div className="h-[300vh]">
-      <div className="sticky top-0 max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[10]">
+    <div className="max-[720px]:h-[225vh] max-[920px]:h-[270vh] h-[300vh]">
+      <div className="sticky top-0 max-[720px]:h-[75vh] max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[10]">
         <Card index={0}>
           <div className="w-full h-full flex items-center justify-center text-2xl">
             <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
@@ -63,13 +63,13 @@ export default function Paradox() {
               />
             </div>
             <div className="w-full h-full overflow-hidden hidden rounded-2xl hidden max-[920px]:block">
-              <img src={pic4} alt="" width="100%" />
+              <img src={pic4} alt="" width="100%" className="w-full h-full object-cover"/>
             </div>
           </div>
         </Card>
       </div>
 
-      <div className="sticky top-0 max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[20]">
+      <div className="sticky top-0 max-[720px]:h-[75vh] max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[20]">
         <Card index={1}>
           <div className="w-full h-full flex items-center justify-center text-2xl">
             <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
@@ -82,21 +82,21 @@ export default function Paradox() {
               />
             </div>
             <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
-              <img src={pic5} alt="" width="100%" />
+              <img src={pic5} alt="" width="100%" height="100%" className="w-full h-full object-cover"/>
             </div>
           </div>
         </Card>
       </div>
 
-      <div className="sticky top-0 max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[30]">
+      <div className="sticky top-0 max-[720px]:h-[75vh] max-[920px]:h-[90vh] h-[100vh] flex items-center justify-center z-[30]">
         <Card index={2}>
           <div className="w-full h-full flex items-center justify-center text-2xl">
             <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
-              <img src={pic3} alt="" className="w-full h-full object-cover" />
+              <img src={pic3} alt="" height="100%" className="w-full h-full object-cover" />
             </div>
 
             <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
-              <img src={pic6} alt="" className="w-full" />
+              <img src={pic6} alt="" height="100%" className="w-full h-full object-cover"/>
             </div>
           </div>
         </Card>
