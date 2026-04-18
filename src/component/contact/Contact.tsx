@@ -132,10 +132,10 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="flex justify-center">
-            <div>
-              <button className="text-[12px] w-full bg-blue-500 hover:bg-blue-600 text-white py-[10px] px-[25px] rounded-lg font-semibold transition-all duration-300 ">
+            <div className="button_resume">
+              <p className="text-[12px] w-full bg-blue-500 text-white py-[10px] px-[25px] rounded-lg font-semibold transition-all duration-300 ">
                 Send Message
-              </button>
+              </p>
             </div>
           </div>
         </div>

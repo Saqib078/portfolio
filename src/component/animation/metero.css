@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 /* Meteor animation */
 .meteor-bg {
   background: black;
@@ -80,4 +81,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.loading_text{
+  font-family: "Fraunces", serif;
 }
