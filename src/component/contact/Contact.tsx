@@ -1,9 +1,73 @@
+import toast from "react-hot-toast";
+import ReCAPTCHA from "react-google-recaptcha";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { LiaFileDownloadSolid } from "react-icons/lia";
+import Resume from "../../assets/Resume_replysaqib123@gmail.pdf";
+
 import "./contact.css";
 
-import Resume from "../../assets/Resume_replysaqib123@gmail.pdf";
+type FormData = {
+  name: string;
+  to: string;
+  mes: string;
+};
+
+import { useRef, useState } from "react";
 const Contact = () => {
+  const captchaRef = useRef<ReCAPTCHA | null>(null);
+
+  const [form, setForm] = useState<FormData>({
+    name: "",
+    to: "",
+    mes: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    const token = captchaRef.current?.getValue();
+
+    if (!token) {
+      toast.error("Please verify captcha");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const res = await fetch(import.meta.env.VITE_random_value, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...form,
+          captchaToken: token, // 👈 important
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message);
+
+      toast.success(
+        "Thanks! Your message has been received. We’ll contact you soon.",
+      );
+
+      setForm({ name: "", to: "", mes: "" });
+      captchaRef.current?.reset(); // 👈 reset after success
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleDownload = () => {
     // download trigger
@@ -11,8 +75,6 @@ const Contact = () => {
     link.href = Resume; // 👈 apna resume path yaha daalo
     link.download = "My_Resume.pdf";
     link.click();
-
-
   };
 
   return (
@@ -108,6 +170,9 @@ const Contact = () => {
           {/* Name */}
           <div className="mb-6">
             <input
+              name="name"
+              value={form.name}
+              onChange={handleChange}
               type="text"
               placeholder="Enter Your Name"
               className="text-[13px] w-full bg-transparent border border-blue-500/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
@@ -117,6 +182,9 @@ const Contact = () => {
           {/* Email */}
           <div className="mb-6">
             <input
+              name="to"
+              value={form.to}
+              onChange={handleChange}
               type="email"
               placeholder="Enter Your Email"
               className="text-[13px] w-full bg-transparent border border-blue-500/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition"
@@ -126,16 +194,32 @@ const Contact = () => {
           {/* Message */}
           <div className="mb-6">
             <textarea
+              name="mes"
+              value={form.mes}
+              onChange={handleChange}
               rows={4}
               placeholder="Your Message..."
               className="text-[13px] w-full bg-transparent border border-blue-500/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition resize-none"
             ></textarea>
           </div>
+          <div className="flex justify-center pb-[10px]">
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_radom_value}
+              ref={captchaRef}
+              className=""
+            />
+          </div>
           <div className="flex justify-center">
             <div className="button_resume">
-              <p className="text-[12px] w-full bg-blue-500 text-white py-[10px] px-[25px] rounded-lg font-semibold transition-all duration-300 ">
-                Send Message
-              </p>
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="w-full bg-transparent border-none p-0"
+              >
+                <p className="text-[12px] w-full bg-blue-500 text-white py-[10px] px-[25px] rounded-lg font-semibold transition-all duration-300">
+                  {loading ? "Sending..." : "Send Message"}
+                </p>
+              </button>
             </div>
           </div>
         </div>

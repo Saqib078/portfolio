@@ -53,53 +53,80 @@ export default function Paradox() {
     <div className="h-[300vh]">
       <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[10]">
         <Card index={0}>
-          <div className="w-full h-full flex items-center justify-center text-2xl">
-            <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
-              <img
-                src={pic1}
-                alt=""
-                width="100%"
-                height="100%"
-                className="w-full h-full object-cover"
-              />
+          <a href="https://ffpftwebapp.web.app/" target="__blank">
+            <div className="w-full h-full flex items-center justify-center text-2xl">
+              <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
+                <img
+                  src={pic1}
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-full h-full overflow-hidden hidden rounded-2xl hidden max-[920px]:block">
+                <img
+                  src={pic4}
+                  alt=""
+                  width="100%"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <div className="w-full h-full overflow-hidden hidden rounded-2xl hidden max-[920px]:block">
-              <img src={pic4} alt="" width="100%" className="w-full h-full object-cover"/>
-            </div>
-          </div>
+          </a>
         </Card>
       </div>
 
       <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[20]">
         <Card index={1}>
-          <div className="w-full h-full flex items-center justify-center text-2xl">
-            <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
-              <img
-                src={pic2}
-                alt=""
-                width="100%"
-                height="100%"
-                className="w-full h-full object-cover"
-              />
+          <a href="https://pkgoelweb.web.app/" target="__blank">
+            <div className="w-full h-full flex items-center justify-center text-2xl">
+              <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
+                <img
+                  src={pic2}
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
+                <img
+                  src={pic5}
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
-              <img src={pic5} alt="" width="100%" height="100%" className="w-full h-full object-cover"/>
-            </div>
-          </div>
+          </a>
         </Card>
       </div>
 
       <div className="sticky top-0 h-[100vh] flex items-center justify-center z-[30]">
         <Card index={2}>
-          <div className="w-full h-full flex items-center justify-center text-2xl">
-            <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
-              <img src={pic3} alt="" height="100%" className="w-full h-full object-cover" />
-            </div>
+          <a href="https://upmtsweb.web.app/" target="__blank">
+            <div className="w-full h-full flex items-center justify-center text-2xl">
+              <div className="w-full h-full overflow-hidden rounded-2xl hidden min-[921px]:block">
+                <img
+                  src={pic3}
+                  alt=""
+                  height="100%"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
-              <img src={pic6} alt="" height="100%" className="w-full h-full object-cover"/>
+              <div className="w-full h-full overflow-hidden rounded-2xl hidden max-[920px]:block">
+                <img
+                  src={pic6}
+                  alt=""
+                  height="100%"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-          </div>
+          </a>
         </Card>
       </div>
     </div>

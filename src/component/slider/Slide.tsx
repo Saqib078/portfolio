@@ -6,7 +6,6 @@ type SlideProps = {
 };
 
 const Slide = ({ openclose, setOpenclose }: SlideProps) => {
-    console.log(document.querySelector('.sidebar'))
   useEffect(() => {
     if (openclose) {
       document.body.style.overflow = "hidden";

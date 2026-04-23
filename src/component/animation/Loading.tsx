@@ -28,7 +28,7 @@ export default function Loading() {
     <div className="relative h-screen w-screen overflow-hidden bg-gray-100">
       <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
         <motion.div
-          className="loading_text absolute top-1/2 -translate-y-1/2 whitespace-nowrap max-[550px]:text-[60px] max-[750px]:text-[80px] max-[950px]:text-[100px] text-[120px] font-bold text-[#080810]"
+          className="loading_text absolute top-1/2 -translate-y-1/2 whitespace-nowrap max-[550px]:text-[30px] max-[750px]:text-[50px] max-[950px]:text-[70px] text-[80px] font-bold text-[#080810]"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
@@ -36,7 +36,7 @@ export default function Loading() {
             ease: "linear",
           }}
         >
-          FRONTEND DEVELOPER &nbsp; FRONTEND DEVELOPER &nbsp; FRONTEND DEVELOPER
+          FULL-STACK DEVELOPER &nbsp; FULL-STACK DEVELOPER &nbsp; FULL-STACK DEVELOPER
         </motion.div>
       </div>
       {/* STEP 1: Loader */}

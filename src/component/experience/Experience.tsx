@@ -4,13 +4,13 @@ import "./experience.css";
 
 const Experience = () => {
   const companyDetails: string[] = [
-    "Developed and optimized responsive, cross-browser interfaces using ReactJS, JavaScript, HTML5, and CSS3, enhancing usability and performance across devices.",
-    "Integrated real-time data synchronization and secure authentication using Firebase, while managing MySQL databases to ensure reliable and scalable functionality.",
-    "Deployed multiple applications via Firebase Hosting, Hostinger, cPanel and traditional servers, ensuring seamless performance and broad accessibility.",
+    "Developed and deployed 15+ scalable web applications using NextJs ,ReactJs, JavaScript, HTML5, CSS3, NodeJs, ExpressJs and Firebase, ensuring responsive, cross-browser performance and real-time data synchronization with secure authentication.",
+    "Designed and maintained backend systems with Mongoose, MySQL, integrating efficient APIs and deploying applications via Firebase Hosting, Hostinger, Cpanel and traditional servers for reliable and scalable delivery.",
+    "Collaborated in Agile environments (sprint planning, stand-ups, retrospectives), using Git/GitHub and tools like VS Code, Postman, and MySQL Workbench to maintain high-quality code and streamline development workflows.",
   ];
 
   const companyDetails2: string[] = [
-    "Delivered practical assignments and contributed to multiple mini-projects, strengthening foundations in software development andanalytical problem-solving.",
+    "Delivered practical assignments and contributed to multiple mini-projects, strengthening core software development skills and analytical problem-solving.",
     "Collaborated with cross-functional teams on frontend development using ReactJS, delivering responsive, user-friendly interfaces that improved usability across multiple devices.",
   ];
 
@@ -51,7 +51,7 @@ const Experience = () => {
             </div>
             <div className="bg-[#ffffff14] rounded-[20px] max-[820px]:py-[5px] max-[820px]:px-[10px] max-[1150px]:px-[20px] py-[20px] px-[40px] m-[40px] max-[820px]:m-[5px] max-[820px]:mt-[50px] max-[820px]:mb-[45px] mt-[90px] mb-[95px]">
               <div className="flex max-[960px]:flex-col justify-between text-white max-[1150px]:p-[10px] p-[20px]">
-                <div className="flex items-center">
+                <div className="flex max-[600px]:flex-col max-[600px]:items-start items-center">
                   <div className="max-[850px]:w-[75px] max-[1450px]:w-[85px] max-[1720px]:w-[100px] w-[150px] py-[20px] bg-white p-[10px] rounded-[10px]">
                     <img src={technovel} alt="" width="100%" />
                   </div>
@@ -74,7 +74,7 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-                <div className="company_date max-[960px]:pl-[110px] max-[1450px]:text-[13px] max-[1720px]:text-[16px] text-[20px] text-gray-300 uppercase">
+                <div className="company_date max-[600px]:pl-[10px] max-[960px]:pl-[110px] max-[1450px]:text-[13px] max-[1720px]:text-[16px] text-[20px] text-gray-300 uppercase">
                   <p>july 2023 - feb 2026</p>
                 </div>
               </div>
@@ -111,12 +111,12 @@ const Experience = () => {
             </div>
             <div className="bg-[#ffffff14] rounded-[20px] py-[20px] max-[820px]:py-[5px] max-[820px]:px-[10px] max-[1150px]:px-[20px] px-[40px] max-[820px]:m-[5px] max-[820px]:mb-[55px] m-[40px] mt-0">
               <div className="flex max-[960px]:flex-col justify-between text-white p-[20px]">
-                <div className="flex items-center">
+                <div className="flex max-[600px]:flex-col max-[600px]:items-start items-center">
                   <div className="max-[1720px]:w-[70px] w-[90px] bg-white p-[10px] rounded-[10px]">
                     <img src={Xenon} alt="" width="100%" />
                   </div>
-                  <div className="pl-[20px]">
-                    <div className="flex pb-[4px] items-end ">
+                  <div className="max-[600px]:pl-[5px] pl-[20px]">
+                    <div className="flex pb-[4px] items-end">
                       <div className="max-[1450px]:text-[16px] max-[1720px]:text-[18px] text-[22px] company_name font-extrabold">
                         <p>XenonStack</p>
                       </div>
@@ -136,7 +136,7 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-                <div className="company_date  max-[960px]:pl-[90px] max-[1450px]:text-[13px] max-[1720px]:text-[16px] text-[20px] text-gray-300 uppercase">
+                <div className="company_date max-[600px]:pl-[10px] max-[960px]:pl-[90px] max-[1450px]:text-[13px] max-[1720px]:text-[16px] text-[20px] text-gray-300 uppercase">
                   <p>feb 2023 - April 2023</p>
                 </div>
               </div>

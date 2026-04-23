@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 import About from "./component/About/About";
 import Contact from "./component/contact/Contact";
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <Toaster position="top-center" />
       <div>
         <SplashCursor />
         <Navbar />
